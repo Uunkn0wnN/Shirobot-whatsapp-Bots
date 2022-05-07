@@ -11,9 +11,9 @@
 </p>
 </p>
 <p align="center">
-<a href="https://Uunkn0wnN.github.io"><img title="Creator" src="https://img.shields.io/badge/Creator-スマイル-purple.svg?style=for-the-badge&logo=github"></a>
+<a href="https://Uunkn0wnN.github.io"><img title="Creator" src="https://img.shields.io/badge/Creator-justpiple-purple.svg?style=for-the-badge&logo=github"></a>
 <a href="https://Uunkn0wnN.github.io"><img title="Creator" src="https://img.shields.io/badge/Ownerr-22.1447-purple.svg?style=for-the-badge&logo=github"></a>
-<a href="https://Uunkn0wnN.github.io"><img title="Creator" src="https://img.shields.io/badge/Recode-ｓａｔｒｉｏ-purple.svg?style=for-the-badge&logo=github"></a>
+<a href="https://Uunkn0wnN.github.io"><img title="Creator" src="https://img.shields.io/badge/Recode-スマイル-purple.svg?style=for-the-badge&logo=github"></a>
 <a href="https://github.com/Uunkn0wnN"><img title="Creator" src="https://img.shields.io/badge/membantu-KEE-purple.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
