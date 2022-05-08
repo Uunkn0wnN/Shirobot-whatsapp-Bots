@@ -132,17 +132,27 @@ detectChange('./lib/greet.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `
 detectChange('./handler.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./index.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/afk.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./SECURITY.md', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} Kontol amat ganti isinya!`))
+detectChange('./SESSION.md', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} Kontol amat di ganti isinya!`))
 detectChange('./lib/client.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/func.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/http-server.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/log.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/json/dataUser.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./by-22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} kontol!`))
+detectChange('./public/Follow-instagram-@22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} kontol!`))
+detectChange('./Shirobot@22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi kontol!`))
+detectChange('./lib/By-スマイル-', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./lib/json/By-スマイル-@22.1447-', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./lib/vn/Shirobot@スマイル', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./lib/temp/Shirobot@Uunkn0wnN', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/json/dataGc.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/json/vn.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./E3CE1T.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./app.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./config.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
-function detectChange(module, cb){
+detectChange('./README.md', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+function detectChange(module, cb){ 
 	fs.watchFile(require.resolve(module), () => {
 	 delete require.cache[require.resolve(module)]
 	 if (cb) cb(module)
