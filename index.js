@@ -77,14 +77,14 @@ const starts = async (sesName) => {
 				fs.writeFileSync('./lib/json/dataGc.json', JSON.stringify(dataGc, null, 2))
 			}
             if (isGroup && dataGc[from].antitagall && !message.isAdmin && (message.mentionedJidList.length == message.groupMembers.length || message.mentionedJidList.length-1 == message.groupMembers.length)){
-                Client.reply(from, '@${sender.split("@")[0]}\nTagall Terdeteksi\n\nhttps://wa.me/c/6289630985223', message)
+                Client.reply(from, 'Tagall Terdeteksi\n\nhttps://wa.me/c/6289630985223', message)
                 client.groupRemove(from, [sender]).catch(() => Client.reply(from, `Jadikan bot admin agar bisa menggunakan fitur antitagall\n\nhttps://wa.me/c/6289630985223`, message))
             }
             if (isGroup && dataGc[from].antiviewonce && message.type == 'viewOnceMessage'){
                 var msg = {...message}
                 msg.message = message.message.viewOnceMessage.message
                 msg.message[Object.keys(msg.message)[0]].viewOnce = false
-                Client.reply(from, '@${sender.split("@")[0]}\mViewOnce Terdeteksi!\n\nhttps://wa.me/c/6289630985223', message)
+                Client.reply(from, 'ViewOnce Terdeteksi!\n\nhttps://wa.me/c/6289630985223', message)
                 client.forwardMessage(from, msg)
             }
 			if (isGroup && !message.isAdmin && dataGc[from].antilink && /chat\.whatsapp\.com/gi.test(body)){
@@ -92,7 +92,7 @@ const starts = async (sesName) => {
 				dtclink.forEach(async l => {
 					checks = await Client.checkInviteLink(l)
 					if(checks.status == 200){
-						Client.reply(from, '@${sender.split("@")[0]}\nGroup link Terdeteksi!\n\nhttps://wa.me/c/6289630985223`, message)
+						Client.reply(from, 'Group link Terdeteksi!\n\nhttps://wa.me/c/6289630985223', message)
 						client.groupRemove(from, [sender]).catch(() => Client.reply(from, `Jadikan bot admin agar bisa menggunakan fitur antilink\n\nhttps://wa.me/c/6289630985223`, message))
 					}
 				})
@@ -139,7 +139,7 @@ detectChange('./lib/func.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `$
 detectChange('./lib/http-server.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/log.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/json/dataUser.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
-detectChange('./by-22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} kontol!`))
+detectChange('./By-22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} kontol!`))
 detectChange('./public/Follow-instagram-@22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} kontol!`))
 detectChange('./Shirobot@22.1447', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi kontol!`))
 detectChange('./lib/By-スマイル-', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
