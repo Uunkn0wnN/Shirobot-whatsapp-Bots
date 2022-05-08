@@ -70,21 +70,21 @@ const starts = async (sesName) => {
 			const from = message.key.remoteJid
             const isGroup = from.endsWith('@g.us')
             const sender = isGroup ? message.participant : from
-			if (global.tebakgambar[from] && global.tebakgambar[from].id && global.tebakgambar[from].jawaban.toLowerCase() == body.toLowerCase()) Client.reply(from, `YES TEBAK GAMBAR BERHASIL DIJAWAB OLEH @${sender.split("@")[0]}\n\nhttps://shiroweb-dashboard.221447.repl.co`, message).then(() => global.tebakgambar[from] = {}) 
+			if (global.tebakgambar[from] && global.tebakgambar[from].id && global.tebakgambar[from].jawaban.toLowerCase() == body.toLowerCase()) Client.reply(from, `[YES] TEBAK GAMBAR BERHASIL DIJAWAB OLEH @${sender.split("@")[0]}\n\nhttps://shiroweb-dashboard.221447.repl.co`, message).then(() => global.tebakgambar[from] = {}) 
 			if (global.vn.includes(body)) Client.sendPtt(from, `./lib/vn/${body}.mp3`, message)
 			if (isGroup && !dataGc[from]){
 				dataGc[from] = {afk:{}}
 				fs.writeFileSync('./lib/json/dataGc.json', JSON.stringify(dataGc, null, 2))
 			}
             if (isGroup && dataGc[from].antitagall && !message.isAdmin && (message.mentionedJidList.length == message.groupMembers.length || message.mentionedJidList.length-1 == message.groupMembers.length)){
-                Client.reply(from, 'Tagall Terdeteksi\n\nhttps://wa.me/c/6289630985223', message)
+                Client.reply(from, '@${sender.split("@")[0]}\nTagall Terdeteksi\n\nhttps://wa.me/c/6289630985223', message)
                 client.groupRemove(from, [sender]).catch(() => Client.reply(from, `Jadikan bot admin agar bisa menggunakan fitur antitagall\n\nhttps://wa.me/c/6289630985223`, message))
             }
             if (isGroup && dataGc[from].antiviewonce && message.type == 'viewOnceMessage'){
                 var msg = {...message}
                 msg.message = message.message.viewOnceMessage.message
                 msg.message[Object.keys(msg.message)[0]].viewOnce = false
-                Client.reply(from, 'ViewOnce Terdeteksi!\n\nhttps://wa.me/c/6289630985223', message)
+                Client.reply(from, '@${sender.split("@")[0]}\mViewOnce Terdeteksi!\n\nhttps://wa.me/c/6289630985223', message)
                 client.forwardMessage(from, msg)
             }
 			if (isGroup && !message.isAdmin && dataGc[from].antilink && /chat\.whatsapp\.com/gi.test(body)){
@@ -92,7 +92,7 @@ const starts = async (sesName) => {
 				dtclink.forEach(async l => {
 					checks = await Client.checkInviteLink(l)
 					if(checks.status == 200){
-						Client.reply(from, `Group link Terdeteksi!\n\nhttps://wa.me/c/6289630985223`, message)
+						Client.reply(from, '@${sender.split("@")[0]}\nGroup link Terdeteksi!\n\nhttps://wa.me/c/6289630985223`, message)
 						client.groupRemove(from, [sender]).catch(() => Client.reply(from, `Jadikan bot admin agar bisa menggunakan fitur antilink\n\nhttps://wa.me/c/6289630985223`, message))
 					}
 				})
