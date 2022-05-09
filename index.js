@@ -128,7 +128,9 @@ cron.schedule('0 0 * * *', () => {
     console.log(color('[ INFO ]', 'cyan'), 'LIMIT DI RESET!')
 });
 detectChange('./lib/text.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./LICENSE', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/greet.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
+detectChange('./package.json', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./handler.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./index.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
 detectChange('./lib/afk.js', (mdl) => console.log(color('[ INFO ]', 'cyan'), `${mdl} perubahan terdeteksi!`))
