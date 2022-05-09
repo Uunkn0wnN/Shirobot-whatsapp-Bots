@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://media.giphy.com/media/kXFpgStKE2Ypi/giphy.gif" alt="GIF width="200" height="200"/>
+<img src="https://media.giphy.com/media/3OOouM5FTExGlmudAr/giphy-downsized-large.gif" alt="GIF width="200" height="200"/>
 </p>
 <p align="center">
     <a href="https://Uunkn0wnN.github.io">
